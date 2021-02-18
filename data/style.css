@@ -1,0 +1,48 @@
+.card-style{
+    width: 18rem;
+    background-color: #444444;
+}
+
+.no_scroll {
+  overflow-x: hidden;
+}
+
+.mb-10{
+    margin-bottom: 70px;
+}
+
+.mt-10{
+  margin-top: 70px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.zoom {
+    transition: transform .2s;
+  }
+  
+.zoom:hover {
+    z-index: 1000;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+    border-width: 2px;
+    border-color: black;
+  }
+.option_Style{
+    max-width: 250px !important; 
+    background-color: grey;
+    
+}
+
+.hov:hover {
+  z-index: 1000;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  border-width: 1px;
+  border-color: black;
+}
