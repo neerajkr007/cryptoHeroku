@@ -161,8 +161,8 @@
         public financial transaction database.
       </h5>
       <h2 class="mt-5 mb-5 heading text-white">Major cryptocurrencies :</h2>
-      <!---<div class="mt-5 mb-5 justify-content-between d-flex inline-flex" style="background-color: darkcyan;">
-        <div class="hov">
+      <div id="banner2" class="mt-5 mb-5 d-flex inline-flex" style="background-color: darkcyan;">
+        <!---<div class="hov">
           <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test0</p>
         </div>
         <div class="hov">
@@ -179,8 +179,35 @@
         </div>
         <div class="hov">
           <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test5</p>
+        </div>--->
+        
+        <div class="">
+          <button id="banner20" class="btn btn-info">button0</button>
         </div>
-      </div>--->
+        <div class="">
+          <button id="banner21" class="btn btn-info">button1</button>
+        </div>
+        <div class="">
+          <button id="banner22" class="btn btn-info">button2</button>
+        </div>
+        <div class="">
+          <button id="banner23" class="btn btn-info">button3</button>
+        </div>
+        <div class="">
+          <button id="banner24" class="btn btn-info">button4</button>
+        </div>
+        <div class="">
+          <button id="banner25" class="btn btn-info">button5</button>
+        </div>
+        <script>
+          var width =  Math.floor(document.getElementById("banner2").offsetWidth/6)
+          console.log(width)
+          for(let i = 0; i < 6; i++)
+          {
+            document.getElementById("banner2"+i).setAttribute("style", "width:"+ width+"px;")
+          }
+        </script>
+      </div>
       <div class="row d-flex justify-content-between text-white">
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
