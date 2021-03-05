@@ -3,18 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5c50a4aeb8.js" crossorigin="anonymous"></script>
     <title>Cryptocurrency</title>
 </head>
-<body >
+<body class="newbg" onload="loaded(); loaded2()">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./data/style.css">
-
+  <script src="./modalScript.js"></script>
+  <script>
+    
+    function loaded()
+    {
+      //$('#modal').modal('toggle')
+      let innerhtml = []
+      for(let i = 0; i < 4; i++)
+      {
+        innerhtml.push(document.getElementById("navButtons"+i).innerHTML)
+      }
+      var once = [true, true, true, true]
+      for(let i = 0; i < 4; i++)
+      {
+        $("#navButtons"+i).on('mouseover', function() 
+        { 
+          if(once[i])
+          {
+            if(i != 2)
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="./data/newBG/toggle rectangle green.svg">'
+            else
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="./data/newBG/toggle rectangle green.svg">'
+            once[i] = false
+          }
+          for(let j = 0; j < 4; j++)
+          {
+            if(i != j)
+            {
+              document.getElementById("navButtons"+j).innerHTML = innerhtml[j]
+              once[j] = true
+            }
+          }
+        });
+      }
+    }
+  </script>
 	
-  <nav class="navbar navbar-expand-md navbar-light" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
+  <nav class="navbar navbar-expand-md navbar-light newbg" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link active" href="./index.html"><img src="./data/logo.png" width="150px" height="45px" alt="" ></a>
+        <a class="nav-link active" href="./index.html"><img src="./data/newBG/Component 8.svg"></a>
       </li>
     </ul>
 	  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,20 +61,19 @@
     </button>
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-
       </ul>
 	    <ul class="nav nav-bar navbar-right">
         <li class="nav-item active">
-          <a class="nav-link active text-white" href="./index.html">Home</a>
+          <a class="nav-link active text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons0" >Home</strong></a>
         </li>
 	      <li class="nav-item active">
-	        <a class="nav-link text-white" href="./index.html">Blog</a>
+	        <a class="nav-link text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
 	      </li>
 	      <li class="nav-item active">
-	      	<a class="nav-link text-white" href="./data/contact.html">Contact us</a>
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./data/contact.html" style="font-size: larger;"><strong id="navButtons2" >Contact us</strong></a>
 	      </li>
         <li class="nav-item active">
-          <a class="nav-link text-white" href="./data/quiz.html">Quiz</a>
+          <a class="nav-link text-white heading" style="width: 65px !important;" href="./data/quiz.html" style="font-size: larger;"><strong id="navButtons3" >Quiz</strong></a>
         </li>
 	    </ul>
 	  </div>
@@ -72,7 +110,7 @@
       }
     ],
     "showSymbolLogo": true,
-    "colorTheme": "light",
+    "colorTheme": "dark",
     "isTransparent": false,
     "displayMode": "adaptive",
     "locale": "in"
@@ -80,9 +118,9 @@
     </script>
   </div>
   <div class="container">
-    <h1 class="text-center mt-3">Cryptocurrency</h1>
+    <h1 class="text-center mt-3 heading text-white"><img src="./data/newBG/CRYPTOCURRENCY.svg"></h1>
     <div id="main" class="mt-5">
-      <h5>
+      <h5 class="context text-white">
         A cryptocurrency (or crypto currency or crypto for short) is a digital asset designed to work as a medium of
         exchange wherein individual coin ownership records are stored in a ledger existing in a form of computerized
         database using strong cryptography to secure transaction records, to control the creation of additional coins, and
@@ -93,7 +131,83 @@
         control, each cryptocurrency works through distributed ledger technology, typically a blockchain, that serves as a
         public financial transaction database.
       </h5>
-      <h2 class="mt-5 mb-5">Major cryptocurrencies :</h2>
+      <h2 class="mt-5 mb-5 heading text-white">Major cryptocurrencies :</h2>
+      <div class="row d-flex justify-content-between text-white">
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#1</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/Bitcoin.svg">
+          </div>
+          <P class="mt-5">Bitcoin is a digital currency that was created in January 2009.Bitcoin offers the promise of lower transaction fees.</P>
+          <img class="mt-5" src="./data/bitcoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#2</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/Ethereum.svg">
+          </div>
+          <P class="mt-5">Ethereum is a digital currency.It's a community-built technology behind the
+            cryptocurrency ether (ETH).</P>
+          <img class="mt-5" src="./data/Ethereum.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#3</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/Litecoin.svg">
+          </div>
+          <P class="mt-5">Litecoin is increasingly used in the same breath as Bitcoin,
+            and it functions practically the same way.</P>
+          <img class="mt-5" src="./data/litecoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#4</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/Cardano.svg">
+          </div>
+          <P class="mt-5">Cardano is a decentralized public blockchain and cryptocurrency project and is fully open source.</P>
+          <img class="mt-5" src="./data/Cardano.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#5</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/XRP.svg">
+          </div>
+          <P class="mt-5">XRP is a digital asset built for payments. It is the native digital asset on the XRP Ledger—an open-source, permissionless and decentralized.</P>
+          <img class="mt-5" src="./data/xrp.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+        <div class="col-md-5 mr-3 ml-3">
+          <div class="d-flex inline-flex">
+            <h4 class="">#6</h4>
+            <img style="margin-left: 10vw;" src="./data/newBG/Dogecoin.svg">
+          </div>
+          <P class="mt-5">Dogecoin is a cryptocurrency invented by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system that is instant, fun, and low fee</P>
+          <img class="mt-5" src="./data/doge.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <div class=" mt-10"> 
+            <button id="opinion5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
+            <button id="features5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+          </div>
+        </div>
+      </div>
       <div id="card1" class="row justify-content-center">
         <div id="main_card" class="zoom card text-white mb-5 card-style col-md-3 mr-3" style="min-height: min-content !important; width: 220px !important;">
           <img class="card-img-top" src="./data/bitcoin.jpg" alt="Card image cap" style="max-height: 180px; max-width: 100%;">
@@ -108,8 +222,7 @@
             <h5 class="card-title">Features</h5>
             <p class="card-text" style="font-size: smaller;">1. Greater Liquidity Relative to Other Cryptocurrencies</p>
             <p class="card-text" style="font-size: smaller;">2. Increasingly Wide Acceptance as a Payment Method</p>
-            <p class="card-text" style="font-size: smaller;">3. International Transactions Easier Than Regular Currencies
-            </p>
+            <p class="card-text" style="font-size: smaller;">3. International Transactions Easier Than Regular Currencies</p>
             <p class="card-text" style="font-size: smaller;">4. Generally Lower Transaction Fees</p>
             <p class="card-text" style="font-size: smaller;">5. Anonymity and Privacy Relative to Traditional Currencies
             </p>
@@ -273,16 +386,32 @@
       </div>
     </div>
   </div>
-  <footer class="mt-5" style="background-color: gray; height: 100px;">
-    <div class="" style="max-width: 99vw;">
+  <footer class="mt-5 newfooter" style="height: 100px;">
+    <div style="max-width: 99vw;">
          <div class="float-right" style="padding-right: 50px;">
-             <h5 class="mb-3 mt-3">&copy; Copyright Green Stone 2021</h5>
+          <span class="mb-3 mt-3"><img src="./data/newBG/© Copyright Green Stone 2021.svg"></span>
          </div>
     </div>
   </footer>
+
+  <div id="modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content " style="background-color: #8BEDF7;">
+        <div class="modal-header" style="border: 0;">
+          <h5 id="modal-title" class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="modal-body" class="modal-body">
+        </div>
+        <div class="modal-footer" style="border: 0;">
+          <button id="modal-cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
   
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
 </body>
 </html>

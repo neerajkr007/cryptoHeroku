@@ -35,7 +35,6 @@ input::-webkit-inner-spin-button {
 .option_Style{
     max-width: 250px !important; 
     background-color: grey;
-    
 }
 
 .hov:hover {
@@ -45,4 +44,50 @@ input::-webkit-inner-spin-button {
   transform: scale(1.1); 
   border-width: 1px;
   border-color: black;
+}
+
+.newbg {
+  background-image: url(./newBG/currency.svg);
+  background-size: auto 100%;
+}
+
+.newfooter {
+  background-image: url(./newBG/Rectangle\ last\ page\ footer.svg);
+}
+
+
+@font-face {
+  font-family: "Oswald"; 
+  src: url("//db.onlinewebfonts.com/t/d40bbce8f4b00a569beac2454b69231e.eot");
+}
+
+@font-face {
+  font-family: "Century Gothic"; 
+  src: url("//db.onlinewebfonts.com/t/0d78b12d6be09203d1fbeb76871a369a.eot");
+}
+
+.copyRight {
+  background-image: url(./newBG/©\ Copyright\ Green\ Stone\ 2021.svg);
+}
+
+.context {
+  font-family:"Century Gothic";
+}
+
+p {
+  font-family:"Century Gothic";
+}
+
+.heading {
+  font-family: "Oswald";
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Oswald";
+}
+
+.newbtn {
+  background: transparent; 
+  border: none; 
+  outline: none;
 }
