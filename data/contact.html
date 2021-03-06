@@ -6,13 +6,48 @@
     <title>Cryptocurrency</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script>
+    
+      function loaded()
+      {
+        //$('#modal').modal('toggle')
+        let innerhtml = []
+        for(let i = 0; i < 4; i++)
+        {
+          innerhtml.push(document.getElementById("navButtons"+i).innerHTML)
+        }
+        var once = [true, true, true, true]
+        for(let i = 0; i < 4; i++)
+        {
+          $("#navButtons"+i).on('mouseover', function() 
+          { 
+            if(once[i])
+            {
+              if(i != 2)
+              document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="./newBG/toggle rectangle green.svg">'
+              else
+              document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="./newBG/toggle rectangle green.svg">'
+              once[i] = false
+            }
+            for(let j = 0; j < 4; j++)
+            {
+              if(i != j)
+              {
+                document.getElementById("navButtons"+j).innerHTML = innerhtml[j]
+                once[j] = true
+              }
+            }
+          });
+        }
+      }
+    </script>
 </head>
-<body class="newbg">
+<body class="newbg" onload="loaded()">
     <div id="content" cla style="min-height: 83.8vh;">
-        <nav class="navbar navbar-expand-md navbar-light mb-10" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
+        <nav class="navbar navbar-expand-md navbar-light mb-10 newbg" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link active" href="../index.html"><img src="./newBG/Logo C.svg"></a>
+              <a class="nav-link active" href="../index.html"><img src="./newBG/Component 8.svg"></a>
             </li>
           </ul>
             <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,18 +59,18 @@
 
               </ul>
               <ul class="nav nav-bar navbar-right">
+                <li class="nav-item active">
+                  <a class="nav-link active text-white heading" style="width: 65px !important;" href="../index.html" style="font-size: larger;"><strong id="navButtons0" >Home</strong></a>
+                </li>
                   <li class="nav-item active">
-                    <a class="nav-link active text-white" href="../index.html">Home</a>
+                    <a class="nav-link text-white heading" style="width: 65px !important;" href="../index.html" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
                   </li>
                   <li class="nav-item active">
-                  <a class="nav-link text-white" href="../index.html">Blog</a>
+                      <a class="nav-link text-white heading" style="width: 120px !important;" href="./contact.html" style="font-size: larger;"><strong id="navButtons2" >Contact us</strong></a>
                   </li>
-                  <li class="nav-item active">
-                      <a class="nav-link text-white" href="./contact.html">Contact us</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link text-white" href="./quiz.html">Quiz</a>
-                  </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-white heading" style="width: 65px !important;" href="./quiz.html" style="font-size: larger;"><strong id="navButtons3" >Quiz</strong></a>
+                </li>
               </ul>
             <!---<ul class="navbar-nav narbar-right">
               <li class="nav-item active">
@@ -50,7 +85,7 @@
                   <div class="col-md-4">
                       <h1 class="display-4 text-center">Contact Us</h1>
                       <div>
-                          <img src="./contact_us.jpg" style="max-width: 400px; max-height: 400px;">
+                          <img src="./newBG/contact us Inbox.svg" class="ml-5" style="max-width: 400px; max-height: 400px;">
                       </div>
                   </div>
                   <div class="col-md-3"></div>

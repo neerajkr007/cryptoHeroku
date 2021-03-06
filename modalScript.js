@@ -79,15 +79,79 @@ let features = [
     ]
 ]
 
+let headingSrc = [
+    "./data/newBG/Bitcoin.svg",
+    "./data/newBG/Ethereum.svg",
+    "./data/newBG/Litecoin.svg",
+    "./data/newBG/Cardano.svg",
+    "./data/newBG/XRP.svg",
+    "./data/newBG/Dogecoin.svg"
+]
+
+let coinSrc = [
+    "./data/bitcoin.jpg",
+    "./data/Ethereum.jpg",
+    "./data/litecoin.jpg",
+    "./data/Cardano.jpg",
+    "./data/xrp.jpg",
+    "./data/doge.jpg",
+]
+
+let coinDetails = [
+    "Bitcoin is a digital currency that was created in January 2009.Bitcoin offers the promise of lower transaction fees.",
+    "Ethereum is a digital currency.It's a community-built technology behind the cryptocurrency ether (ETH).",
+    "Litecoin is increasingly used in the same breath as Bitcoin, and it functions practically the same way.",
+    "Cardano is a decentralized public blockchain and cryptocurrency project and is fully open source.",
+    "XRP is a digital asset built for payments. It is the native digital asset on the XRP Ledger—an open-source, permissionless and decentralized.",
+    "Dogecoin is a cryptocurrency invented by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system that is instant, fun, and low fee"
+]
+
 function loaded2()
 {
     for(let i = 0; i < 6; i++)
     {
-        document.getElementById("opinion"+i).onclick = ()=>{
-            showModal([true, opinion[i], coins[i]])
-        }
-        document.getElementById("features"+i).onclick = ()=>{
-            showModal([false, features[i], coins[i]])
+        // document.getElementById("opinion"+i).onclick = ()=>{
+        //     showModal([true, opinion[i], coins[i]])
+        // }
+        // document.getElementById("features"+i).onclick = ()=>{
+        //     showModal([false, features[i], coins[i]])
+        // }
+        document.getElementById("banner2"+i).onclick = ()=>{
+            //document.getElementById("coinDetailsBox").style.display = "none"
+            document.getElementById("features").innerHTML = ""
+            document.getElementById("opinion").innerHTML = ""
+            document.getElementById("number").innerHTML = "#"+(i+1)
+            document.getElementById("title").setAttribute("src", headingSrc[i])
+            document.getElementById("coinImg").setAttribute("src", coinSrc[i])
+            document.getElementById("coinDetail").innerHTML = coinDetails[i]
+            document.getElementById("opinion0").onclick = ()=>{
+                document.getElementById("features").innerHTML = ""
+                document.getElementById("opinion").innerHTML = opinion[i]
+            }
+            document.getElementById("features0").onclick = ()=>{
+                document.getElementById("features").innerHTML = ""
+                document.getElementById("opinion").innerHTML = ""
+                for(let j = 0; j < features[i].length; j++)
+                {
+                    document.getElementById("features").innerHTML += '<div class="d-flex inline-flex"><i class="far fa-hand-point-right" style="vertical-align: middle;"></i><p class="ml-2">'+features[i][j]+'</p><br></div>'
+                }                
+            }
+            //document.getElementById("opinion").setAttribute("id", "opinion"+i)
+            document.getElementById("coinDetailsBox").style.display = "block"
         }
     }
+}
+
+function first(d){
+    document.getElementById("features").innerHTML = ""
+    document.getElementById("opinion").innerHTML = ""
+    if(d == 0)
+    {
+        for(let j = 0; j < features[0].length; j++)
+        {
+            document.getElementById("features").innerHTML += '<div class="d-flex inline-flex"><i class="far fa-hand-point-right" style="vertical-align: middle;"></i><p class="ml-2">'+features[0][j]+'</p><br></div>'
+        }
+    }
+    else
+        document.getElementById("opinion").innerHTML = opinion[0]
 }

@@ -182,22 +182,22 @@
         </div>--->
         
         <div class="">
-          <button id="banner20" class="btn btn-info">button0</button>
+          <button id="banner20" class="btn btn-info" onclick="document.getElementById('coinDetailsBox').style.display = 'block'">Bitcoin</button>
         </div>
         <div class="">
-          <button id="banner21" class="btn btn-info">button1</button>
+          <button id="banner21" class="btn btn-info">Ethereum</button>
         </div>
         <div class="">
-          <button id="banner22" class="btn btn-info">button2</button>
+          <button id="banner22" class="btn btn-info">Litecoin</button>
         </div>
         <div class="">
-          <button id="banner23" class="btn btn-info">button3</button>
+          <button id="banner23" class="btn btn-info">Cardano</button>
         </div>
         <div class="">
-          <button id="banner24" class="btn btn-info">button4</button>
+          <button id="banner24" class="btn btn-info">XRP</button>
         </div>
         <div class="">
-          <button id="banner25" class="btn btn-info">button5</button>
+          <button id="banner25" class="btn btn-info">Dogecoin</button>
         </div>
         <script>
           var width =  Math.floor(document.getElementById("banner2").offsetWidth/6)
@@ -208,7 +208,27 @@
           }
         </script>
       </div>
-      <div class="row d-flex justify-content-between text-white">
+      <div id="coinDetailsBox" >
+        <div class="row text-white">
+          <h4 id="number" class="offset-md-2 col-md-1" style="font-size: xx-large;">#1</h4>
+          <img id="title" class="offset-md-4 col-md-3"  src="./data/newBG/Bitcoin.svg">
+        </div>
+        <div class="row text-white">
+          <P id="coinDetail" class="mt-5 col-md-5" style="font-size: x-large;">Bitcoin is a digital currency that was created in January 2009.Bitcoin offers the promise of lower transaction fees.</P>
+          <img id="coinImg" class="mt-5 col-md-7" src="./data/bitcoin.jpg" style="border-radius: 2rem; max-height: 600px; max-width: 600px; height: auto; width: auto;">
+        </div>
+        <div class="row mt-10"> 
+          <button id="opinion0" class="hov mb-5 offset-md-1" style="background: transparent; border: 0; outline: 0;" onclick="first(1)"><img src="./data/newBG/our opinion button.svg"></button>
+          <button id="features0" class="hov mb-5 offset-md-1" style="background: transparent; border: 0; outline: 0;" onclick="first(0)"><img src="./data/newBG/features button.svg"></button>
+        </div>
+        <div>
+          <p id="opinion" class="text-white"></p>
+        </div>
+        <div>
+          <p id="features" class="text-white"></p>
+        </div>
+      </div>
+      <!---<div class="row d-flex justify-content-between text-white">
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#1</h4>
@@ -282,7 +302,7 @@
             <button id="opinion5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
             <button id="features5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
           </div>
-        </div>
+        </div>--->
       </div>
     </div>
   </div>

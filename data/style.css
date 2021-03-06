@@ -75,6 +75,7 @@ input::-webkit-inner-spin-button {
 }
 
 p {
+  color: white;
   font-family:"Century Gothic";
 }
 
@@ -82,7 +83,8 @@ p {
   font-family: "Oswald";
 }
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3,h4,h5,label {
+  color: white;
   font-family: "Oswald";
 }
 
@@ -128,4 +130,8 @@ h1,h2,h3,h4,h5 {
 .ticker-item{
   display: inline-block; /* Lay items in a horizontal line */
   padding: 0 2rem;
+}
+input {
+  background-color: transparent;
+  background: transparent;
 }
