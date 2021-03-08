@@ -161,52 +161,43 @@
         public financial transaction database.
       </h5>
       <h2 class="mt-5 mb-5 heading text-white">Major cryptocurrencies :</h2>
-      <div id="banner2" class="mt-5 mb-5 d-flex inline-flex" style="background-color: darkcyan;">
-        <!---<div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test0</p>
-        </div>
-        <div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test1</p>
-        </div>
-        <div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test2</p>
-        </div>
-        <div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test3</p>
-        </div>
-        <div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test4</p>
-        </div>
-        <div class="hov">
-          <p class="display-4" style="font-size: x-large; margin-bottom: 1rem; margin-top: 1rem;">test5</p>
-        </div>--->
-        
-        <div class="">
-          <button id="banner20" class="btn btn-info" onclick="document.getElementById('coinDetailsBox').style.display = 'block'">Bitcoin</button>
-        </div>
-        <div class="">
-          <button id="banner21" class="btn btn-info">Ethereum</button>
-        </div>
-        <div class="">
-          <button id="banner22" class="btn btn-info">Litecoin</button>
-        </div>
-        <div class="">
-          <button id="banner23" class="btn btn-info">Cardano</button>
-        </div>
-        <div class="">
-          <button id="banner24" class="btn btn-info">XRP</button>
-        </div>
-        <div class="">
-          <button id="banner25" class="btn btn-info">Dogecoin</button>
-        </div>
-        <script>
+      <div id="banner2" class="mt-5 mb-5 " style="background-color: darkcyan;">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="navbar-nav col-md-12" >
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner20" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;" onclick="document.getElementById('coinDetailsBox').style.display = 'block'">Bitcoin</button>
+              </li>
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner21" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;">Ethereum</button>
+              </li>
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner22" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;">Litecoin</button>
+              </li>
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner23" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;">Cardano</button>
+              </li>
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner24" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;">XRP</button>
+              </li>
+              <li class="nav-item active col-md-2 text-center" style="padding: 0; margin: 0;">
+                <button id="banner25" class="btn btn-info col-md-12" style="background: transparent; outline: none; border: 0;">Dogecoin</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!---<script>
           var width =  Math.floor(document.getElementById("banner2").offsetWidth/6)
           console.log(width)
           for(let i = 0; i < 6; i++)
           {
             document.getElementById("banner2"+i).setAttribute("style", "width:"+ width+"px;")
           }
-        </script>
+        </script>--->
       </div>
       <div id="coinDetailsBox" >
         <div class="row text-white">
