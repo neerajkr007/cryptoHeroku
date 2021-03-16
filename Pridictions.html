@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5c50a4aeb8.js" crossorigin="anonymous"></script>
+    <title>Cryptocurrency</title>
+</head>
+<body class="newbg" onload="loaded();">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./data/style.css">
+  <script>
+    
+    function loaded()
+    {
+      //$('#modal').modal('toggle')
+      let innerhtml = []
+      for(let i = 0; i < 5; i++)
+      {
+        innerhtml.push(document.getElementById("navButtons"+i).innerHTML)
+      }
+      var once = [true, true, true, true, true]
+      for(let i = 0; i < 5; i++)
+      {
+        $("#navButtons"+i).on('mouseover', function() 
+        { 
+          if(once[i])
+          {
+            if(i != 2 || i != 3)
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="./data/newBG/toggle rectangle green.svg">'
+            else
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="./data/newBG/toggle rectangle green.svg">'
+            once[i] = false
+          }
+          for(let j = 0; j < 5; j++)
+          {
+            if(i != j)
+            {
+              document.getElementById("navButtons"+j).innerHTML = innerhtml[j]
+              once[j] = true
+            }
+          }
+        });
+      }
+    }
+  </script>
+	
+  <nav class="navbar navbar-expand-md navbar-light newbg" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link active" href="./index.html"><img src="./data/newBG/Component 8.svg"></a>
+      </li>
+    </ul>
+	  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+    </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+	    <ul class="nav nav-bar navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link active text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons0" >Home</strong></a>
+        </li>
+	      <li class="nav-item active">
+	        <a class="nav-link text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
+	      </li>
+        <li class="nav-item active">
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./Pridictions.html" style="font-size: larger;"><strong id="navButtons2" >Pridictions</strong></a>
+	      </li>
+	      <li class="nav-item active">
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./data/contact.html" style="font-size: larger;"><strong id="navButtons3" >Contact us</strong></a>
+	      </li>
+        <li class="nav-item active">
+          <a class="nav-link text-white heading" style="width: 65px !important;" href="./data/quiz.html" style="font-size: larger;"><strong id="navButtons4" >Quiz</strong></a>
+        </li>
+	    </ul>
+	  </div>
+  </nav>
+  <div class="container" style="min-height: 80.8vh;">
+    <div id="table" class="mt-10">
+      <h3 class="display-4">Bitcoin Price Prediction For 2021, 2022, 2023, 2024 And 2025</h3>
+        <!-- <<table id="table1" class="mt-5 text-center d-flex justify-content-center" style="color: #ffffff;">
+            <tr>
+              <th class="border">Month</th>
+              <th class="border">Open</th>
+              <th class="border">Min-Max</th>
+              <th class="border">Close</th>
+              <th class="border">Total,%</th>
+            </tr>
+            <tr class="text-center border">
+              <th></th>
+              <th></th>
+              <th>2021</th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th class="border"><strong>Mar</strong></th>
+              <th class="border">46334</th>
+              <th class="border">46334-74256</th>
+              <th class="border"><strong>69274</strong></th>
+              <th class="border">49.5%</th>
+            </tr>
+            <tr>
+              <th class="border"><strong>Apr</strong></th>
+              <th class="border">69274</th>
+              <th class="border">53131-85983</th>
+              <th class="border"><strong>80358</strong></th>
+              <th class="border">73.4%</th>
+            </tr>
+          </table>> -->
+          <table class="mt-5 text-center d-flex justify-content-center" style="color: #ffffff;">
+            <tbody >
+              <tr height="20" style="height: 15pt"> 
+
+ 
+            <td align="center" style="height: 20px; width: 52px; border-color: #cccccc; border-style: solid; border-width: 1px">Month</td> 
+            
+             
+            <td align="center" style="height: 20px; width: 47px; border-color: #cccccc; border-style: solid; border-width: 1px">Open</td> 
+            
+             
+            <td align="center" style="height: 20px; width: 95px; border-color: #cccccc; border-style: solid; border-width: 1px">Min-Max</td> 
+            
+             
+            <td align="center" style="height: 20px; width: 47px; border-color: #cccccc; border-style: solid; border-width: 1px">Close</td> 
+            
+             
+            <td align="center" style="height: 20px; width: 49px; border-color: #cccccc; border-style: solid; border-width: 1px">Total,%</td></tr><tr><td class="tb" colspan="6" align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>2021</strong></td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Mar</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">46334</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">46334-74256</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>69274</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">49.5%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Apr</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">69274</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">53131-85983</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>80358</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">73.4%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>May</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">80358</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">80358-99740</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>93215</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">101%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jun</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">93215</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">93215-111880</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>104561</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">126%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jul</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">104561</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">104561-129781</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>121291</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">162%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Sep</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">140698</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">140698-174635</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>163210</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">252%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Oct</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">163210</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">138923-163210</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>149380</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">222%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Nov</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">149380</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">144805-166603</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>155704</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">236%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Aug</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">121291</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">121291-150547</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>140698</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">204%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Dec</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">155704</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">155704-193260</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>180617</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">290%</td></tr><tr><td colspan="6" align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>2022</strong></td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jan</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">180617</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">162371-186815</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>174593</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">277%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Feb</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">174593</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">174593-204391</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>191020</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">312%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Mar</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">191020</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">191020-237094</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>221583</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">378%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Apr</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">221583</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">173101-221583</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>186130</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">302%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>May</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">186130</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">158149-186130</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>170053</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">267%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jun</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">170053</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">170053-211069</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>197261</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">326%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jul</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">197261</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">175339-201735</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>188537</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">307%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Aug</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">188537</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">147285-188537</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>158371</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">242%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Sep</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">158371</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">158371-186672</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>174460</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">277%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Oct</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">174460</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">140167-174460</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>150717</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">225%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Nov</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">150717</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">133735-153867</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>143801</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">210%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Dec</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">143801</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">125296-144158</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>134727</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">191%</td></tr><tr><td colspan="6" align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>2023</strong></td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Jan</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">134727</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">134727-167223</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>156283</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">237%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Feb</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">156283</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">156283-193978</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>181288</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">291%</td></tr><tr height="20" style="height: 15pt"> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>Mar</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">181288</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">181196-208472</td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px"><strong>194834</strong></td> 
+            
+             
+            <td align="center" style="border-color: #cccccc; border-style: solid; border-width: 1px">321%</td></tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <footer class="mt-5 newfooter" style="background-color: gray; height: 100px;">
+    <div style="max-width: 99vw;">
+        <div class="float-right" style="padding-right: 50px;">
+            <span class="mb-3 mt-3"><img src="./data/newBG/© Copyright Green Stone 2021.svg"></span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

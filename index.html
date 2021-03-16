@@ -20,24 +20,24 @@
     {
       //$('#modal').modal('toggle')
       let innerhtml = []
-      for(let i = 0; i < 4; i++)
+      for(let i = 0; i < 5; i++)
       {
         innerhtml.push(document.getElementById("navButtons"+i).innerHTML)
       }
-      var once = [true, true, true, true]
-      for(let i = 0; i < 4; i++)
+      var once = [true, true, true, true, true]
+      for(let i = 0; i < 5; i++)
       {
         $("#navButtons"+i).on('mouseover', function() 
         { 
           if(once[i])
           {
-            if(i != 2)
+            if(i != 2 || i != 3)
             document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="./data/newBG/toggle rectangle green.svg">'
             else
             document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="./data/newBG/toggle rectangle green.svg">'
             once[i] = false
           }
-          for(let j = 0; j < 4; j++)
+          for(let j = 0; j < 5; j++)
           {
             if(i != j)
             {
@@ -69,11 +69,14 @@
 	      <li class="nav-item active">
 	        <a class="nav-link text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
 	      </li>
+        <li class="nav-item active">
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./Pridictions.html" style="font-size: larger;"><strong id="navButtons2" >Pridictions</strong></a>
+	      </li>
 	      <li class="nav-item active">
-	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./data/contact.html" style="font-size: larger;"><strong id="navButtons2" >Contact us</strong></a>
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./data/contact.html" style="font-size: larger;"><strong id="navButtons3" >Contact us</strong></a>
 	      </li>
         <li class="nav-item active">
-          <a class="nav-link text-white heading" style="width: 65px !important;" href="./data/quiz.html" style="font-size: larger;"><strong id="navButtons3" >Quiz</strong></a>
+          <a class="nav-link text-white heading" style="width: 65px !important;" href="./data/quiz.html" style="font-size: larger;"><strong id="navButtons4" >Quiz</strong></a>
         </li>
 	    </ul>
 	  </div>
@@ -209,8 +212,9 @@
           <img id="coinImg" class="mt-5 col-md-7" src="./data/bitcoin.jpg" style="border-radius: 2rem; max-height: 600px; max-width: 600px; height: auto; width: auto;">
         </div>
         <div class="row mt-10"> 
-          <button id="opinion0" class="hov mb-5 offset-md-1" style="background: transparent; border: 0; outline: 0;" onclick="first(1)"><img src="./data/newBG/our opinion button.svg"></button>
-          <button id="features0" class="hov mb-5 offset-md-1" style="background: transparent; border: 0; outline: 0;" onclick="first(0)"><img src="./data/newBG/features button.svg"></button>
+          <button id="pridiction" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="location.replace('./Pridictions.html')"><img src="./data/newBG/our opinion button.svg"></button>
+          <button id="opinion0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(1)"><img src="./data/newBG/our opinion button.svg"></button>
+          <button id="features0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(0)"><img src="./data/newBG/features button.svg"></button>
         </div>
         <div>
           <p id="opinion" class="text-white"></p>

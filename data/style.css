@@ -135,3 +135,7 @@ input {
   background-color: transparent;
   background: transparent;
 }
+
+td {
+  min-width: 120px;
+}
