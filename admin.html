@@ -42,10 +42,10 @@
           });
         }
         socket.emit("showTicker")
+        document.getElementById("form").style.display = "block"
         socket.on("showTicker", (data)=>{
             if(data.list.length != 0)
             {
-                document.getElementById("form").style.display = "block"
                 for(let i = 0; i < data.list.length; i++)
                 {
                     let obj = {}
@@ -101,6 +101,10 @@
               else
               {
                   newValues.push(document.getElementById("input"+i).value)
+              }
+              if(document.getElementById("input"+i).value == "")
+              {
+                  newValues[i] = -1
               }
           }
           socket.emit("save", newValues)

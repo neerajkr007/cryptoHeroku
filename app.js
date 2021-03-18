@@ -78,21 +78,36 @@ io.on('connection', function(socket){
         {
             if(i < tickerData.list.length)
             {
-                if(d[i] != "")
+                if(d[i] != "" && d[i] != -1)
                 {
                     tickerData.list[i] = d[i]
+                    tickerData.markModified("list")
+                }
+                else if(d[i] == -1)
+                {
+                    tickerData.list.splice(i, 1)
                     tickerData.markModified("list")
                 }
             }
             else
             {
-                if(d[i] != "")
+                if(d[i] != "" && d[i] != -1)
                 {
                     tickerData.list.push(d[i])
+                }
+                else if(d[i] == -1)
+                {
+                    tickerData.list.splice(i, 1)
+                    tickerData.markModified("list")
                 }
             }
         }
         await tickerData.save()
+    })
+
+    socket.on("getTicker", async ()=>{
+        let tickerData = await Ticker.findOne({})
+        socket.emit("getTicker", tickerData.list)
     })
 });
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" integrity="sha512-oFOCo2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -15,10 +16,21 @@
   <link rel="stylesheet" type="text/css" href="/style/style.css">
   <script src="/scripts/modalScript.js"></script>
   <script>
-    
+    socket = io.connect()
     function loaded()
     {
       //$('#modal').modal('toggle')
+      socket.emit("getTicker")
+      socket.on("getTicker", (d)=>{
+        for(let i = 0; i < d.length; i++)
+        {
+          let p = document.createElement('p')
+          p.setAttribute("class", "d-inline-flex mr-10")
+          p.setAttribute("style", "padding-top:8px")
+          p.appendChild(document.createTextNode(d[i]))
+          document.getElementById("ticker").appendChild(p)
+        }
+      })
       let innerhtml = []
       for(let i = 0; i < 5; i++)
       {
@@ -120,34 +132,8 @@
   }
     </script>
   </div>
-
-  <div class="tcontainer">
-    <div class="ticker-wrap">
-      <div class="ticker-move">
-        <div class="ticker-item text-white">this is a ticker item.</div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-        <div class="ticker-item text-white"></div>
-      </div>
-    </div>
-  </div>
+  <marquee id="ticker" behavior="scroll" direction="left" style="background-color: #1E222D; max-height: 40px !important;"></marquee> 
+  
 
   <div class="container">
     <h1 class="text-center mt-3 heading text-white"><img src="/data/newBG/CRYPTOCURRENCY.svg"></h1>
