@@ -12,8 +12,8 @@
 <body class="newbg" onload="loaded(); loaded2()">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./data/style.css">
-  <script src="./modalScript.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style/style.css">
+  <script src="/scripts/modalScript.js"></script>
   <script>
     
     function loaded()
@@ -32,9 +32,9 @@
           if(once[i])
           {
             if(i != 2 || i != 3)
-            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="./data/newBG/toggle rectangle green.svg">'
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 40px;" src="/data/newBG/toggle rectangle green.svg">'
             else
-            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="./data/newBG/toggle rectangle green.svg">'
+            document.getElementById("navButtons"+i).innerHTML += '<br><img style="width: 100px; height: 6px" src="/data/newBG/toggle rectangle green.svg">'
             once[i] = false
           }
           for(let j = 0; j < 5; j++)
@@ -53,7 +53,7 @@
   <nav class="navbar navbar-expand-md navbar-light newbg" style='background-color: #0099CC; padding-bottom: 0; margin-bottom: 0;padding-top: 0; margin-top: 0;'>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link active" href="./index.html"><img src="./data/newBG/Component 8.svg"></a>
+        <a class="nav-link active" href="/index"><img src="/data/newBG/Component 8.svg"></a>
       </li>
     </ul>
 	  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,19 +64,19 @@
       </ul>
 	    <ul class="nav nav-bar navbar-right">
         <li class="nav-item active">
-          <a class="nav-link active text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons0" >Home</strong></a>
+          <a class="nav-link active text-white heading" style="width: 65px !important;" href="/index" style="font-size: larger;"><strong id="navButtons0" >Home</strong></a>
         </li>
 	      <li class="nav-item active">
-	        <a class="nav-link text-white heading" style="width: 65px !important;" href="./index.html" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
+	        <a class="nav-link text-white heading" style="width: 65px !important;" href="/index" style="font-size: larger;"><strong id="navButtons1" >Blog</strong></a>
 	      </li>
         <li class="nav-item active">
-	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./Pridictions.html" style="font-size: larger;"><strong id="navButtons2" >Pridictions</strong></a>
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href="/Pridictions" style="font-size: larger;"><strong id="navButtons2" >Pridictions</strong></a>
 	      </li>
 	      <li class="nav-item active">
-	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" ./data/contact.html" style="font-size: larger;"><strong id="navButtons3" >Contact us</strong></a>
+	      	<a class="nav-link text-white heading" style="width: 120px !important;" href=" /contact" style="font-size: larger;"><strong id="navButtons3" >Contact us</strong></a>
 	      </li>
         <li class="nav-item active">
-          <a class="nav-link text-white heading" style="width: 65px !important;" href="./data/quiz.html" style="font-size: larger;"><strong id="navButtons4" >Quiz</strong></a>
+          <a class="nav-link text-white heading" style="width: 65px !important;" href="/quiz" style="font-size: larger;"><strong id="navButtons4" >Quiz</strong></a>
         </li>
 	    </ul>
 	  </div>
@@ -150,7 +150,7 @@
   </div>
 
   <div class="container">
-    <h1 class="text-center mt-3 heading text-white"><img src="./data/newBG/CRYPTOCURRENCY.svg"></h1>
+    <h1 class="text-center mt-3 heading text-white"><img src="/data/newBG/CRYPTOCURRENCY.svg"></h1>
     <div id="main" class="mt-5">
       <h5 class="context text-white">
         A cryptocurrency (or crypto currency or crypto for short) is a digital asset designed to work as a medium of
@@ -205,16 +205,16 @@
       <div id="coinDetailsBox" >
         <div class="row text-white">
           <h4 id="number" class="offset-md-2 col-md-1" style="font-size: xx-large;">#1</h4>
-          <img id="title" class="offset-md-4 col-md-3"  src="./data/newBG/Bitcoin.svg">
+          <img id="title" class="offset-md-4 col-md-3"  src="/data/newBG/Bitcoin.svg">
         </div>
         <div class="row text-white">
           <P id="coinDetail" class="mt-5 col-md-5" style="font-size: x-large;">Bitcoin is a digital currency that was created in January 2009.Bitcoin offers the promise of lower transaction fees.</P>
-          <img id="coinImg" class="mt-5 col-md-7" src="./data/bitcoin.jpg" style="border-radius: 2rem; max-height: 600px; max-width: 600px; height: auto; width: auto;">
+          <img id="coinImg" class="mt-5 col-md-7" src="/data/bitcoin.jpg" style="border-radius: 2rem; max-height: 600px; max-width: 600px; height: auto; width: auto;">
         </div>
         <div class="row mt-10"> 
-          <button id="pridiction" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="location.replace('./Pridictions.html')"><img src="./data/newBG/our opinion button.svg"></button>
-          <button id="opinion0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(1)"><img src="./data/newBG/our opinion button.svg"></button>
-          <button id="features0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(0)"><img src="./data/newBG/features button.svg"></button>
+          <button id="pridiction" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="location.replace('/Pridictions')"><img src="/data/newBG/our opinion button.svg"></button>
+          <button id="opinion0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(1)"><img src="/data/newBG/our opinion button.svg"></button>
+          <button id="features0" class="hov mb-5" style="background: transparent; border: 0; outline: 0;" onclick="first(0)"><img src="/data/newBG/features button.svg"></button>
         </div>
         <div>
           <p id="opinion" class="text-white"></p>
@@ -227,75 +227,75 @@
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#1</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/Bitcoin.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/Bitcoin.svg">
           </div>
           <P class="mt-5">Bitcoin is a digital currency that was created in January 2009.Bitcoin offers the promise of lower transaction fees.</P>
-          <img class="mt-5" src="./data/bitcoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/bitcoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features0" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#2</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/Ethereum.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/Ethereum.svg">
           </div>
           <P class="mt-5">Ethereum is a digital currency.It's a community-built technology behind the
             cryptocurrency ether (ETH).</P>
-          <img class="mt-5" src="./data/Ethereum.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/Ethereum.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features1" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#3</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/Litecoin.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/Litecoin.svg">
           </div>
           <P class="mt-5">Litecoin is increasingly used in the same breath as Bitcoin,
             and it functions practically the same way.</P>
-          <img class="mt-5" src="./data/litecoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/litecoin.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features2" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#4</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/Cardano.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/Cardano.svg">
           </div>
           <P class="mt-5">Cardano is a decentralized public blockchain and cryptocurrency project and is fully open source.</P>
-          <img class="mt-5" src="./data/Cardano.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/Cardano.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features3" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#5</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/XRP.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/XRP.svg">
           </div>
           <P class="mt-5">XRP is a digital asset built for payments. It is the native digital asset on the XRP Ledger—an open-source, permissionless and decentralized.</P>
-          <img class="mt-5" src="./data/xrp.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/xrp.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features4" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>
         <div class="col-md-5 mr-3 ml-3">
           <div class="d-flex inline-flex">
             <h4 class="">#6</h4>
-            <img style="margin-left: 10vw;" src="./data/newBG/Dogecoin.svg">
+            <img style="margin-left: 10vw;" src="/data/newBG/Dogecoin.svg">
           </div>
           <P class="mt-5">Dogecoin is a cryptocurrency invented by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system that is instant, fun, and low fee</P>
-          <img class="mt-5" src="./data/doge.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
+          <img class="mt-5" src="/data/doge.jpg" alt="Card image cap" style="max-height: 100%; max-width: 100%;">
           <div class=" mt-10"> 
-            <button id="opinion5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/our opinion button.svg"></button>
-            <button id="features5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="./data/newBG/features button.svg"></button>
+            <button id="opinion5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/our opinion button.svg"></button>
+            <button id="features5" class="hov float-right mb-5" style="background: transparent; border: 0; outline: 0;"><img src="/data/newBG/features button.svg"></button>
           </div>
         </div>--->
       </div>
@@ -304,7 +304,7 @@
   <footer class="mt-5 newfooter" style="height: 100px;">
     <div style="max-width: 99vw;">
          <div class="float-right" style="padding-right: 50px;">
-          <span class="mb-3 mt-3"><img src="./data/newBG/© Copyright Green Stone 2021.svg"></span>
+          <span class="mb-3 mt-3"><img src="/data/newBG/© Copyright Green Stone 2021.svg"></span>
          </div>
     </div>
   </footer>
