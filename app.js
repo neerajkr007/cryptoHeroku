@@ -103,6 +103,7 @@ io.on('connection', function(socket){
             }
         }
         await tickerData.save()
+        socket.emit("saved");
     })
 
     socket.on("getTicker", async ()=>{
